@@ -1,7 +1,7 @@
 {
   "name": "@salvob/sipclient",
-  "version": "1.0.0-rc.3",
-  "description": "SipClient is an open-source SIP library, compliant with the IETF RFC3261 specification.",
+  "version": "1.0.0-rc.4",
+  "description": "SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 specification.",
   "main": "Sip.js",
   "scripts": {
     "test": "mocha --reporter spec"

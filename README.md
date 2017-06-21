@@ -1,7 +1,7 @@
 # SipClient
 =========
 
-SipClient is an open-source SIP library for nodejs, compliant with the IETF RFC3261 specification.
+SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 specification.
 
 ## Description
 
