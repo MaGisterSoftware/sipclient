@@ -21,12 +21,12 @@ SipClient is an open-source SIP library for nodejs, compliant with the IETF RFC3
     let sipclient = require('@salvob/sipclient').SipClient;
 
     let clientData = {
-        serverHost: 'sip.prov.com',
-        serverPort: 5060,
-        username: 'sipusername',
-        password: 'sippassword',
-        ipNat: '192.168.10.61', // Local Ip Address
-        sessionTime: 2 * 60 // Refresh session every 2 minutes
+        serverHost: 'sip.prov.com', // SIP server address
+        serverPort: 5060,           // SIP server port
+        username: 'sipusername',    // SIP username
+        password: 'sippassword',    // SIP password
+        ipNat: '192.168.10.61',     // Local Ip Address
+        sessionTime: 2 * 60         // Refresh session every 2 minutes
     }
 
     let cb = {
