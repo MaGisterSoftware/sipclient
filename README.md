@@ -1,7 +1,7 @@
-# sip-client
+# SipClient
 =========
 
-Sip-Client is an open-source SIP library, compliant with the IETF RFC3261 specification.
+SipClient is an open-source SIP library for nodejs, compliant with the IETF RFC3261 specification.
 
 ## Description
 
@@ -14,11 +14,11 @@ Sip-Client is an open-source SIP library, compliant with the IETF RFC3261 specif
 
 ## Installation
 
-  `npm install @salvob/sip-client`
+  `npm install @salvob/sipclient`
 
 ## Usage
 
-    let sipclient = require('@salvob/sip-client').SipClient;
+    let sipclient = require('@salvob/sipclient').SipClient;
 
     let clientData = {
         serverHost: 'sip.prov.com',

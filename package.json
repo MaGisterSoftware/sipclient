@@ -1,14 +1,14 @@
 {
-  "name": "@salvob/sip-client",
+  "name": "@salvob/sipclient",
   "version": "1.0.0",
-  "description": "Sip-Client is an open-source SIP library, compliant with the IETF RFC3261 specification.",
+  "description": "SipClient is an open-source SIP library, compliant with the IETF RFC3261 specification.",
   "main": "Sip.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salvob/sip-client.git"
+    "url": "git+https://github.com/salvob/sipclient.git"
   },
   "keywords": [
     "sip",
@@ -18,9 +18,9 @@
   "author": "Salvo Barbagallo <info@salvobarbagallo.com> (http://salvobarbagallo.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/salvob/sip-client/issues"
+    "url": "https://github.com/salvob/sipclient/issues"
   },
-  "homepage": "https://github.com/salvob/sip-client#readme",
+  "homepage": "https://github.com/salvob/sipclient#readme",
   "engines": {
     "node": ">=6.10.0"
   },
