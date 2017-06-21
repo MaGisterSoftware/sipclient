@@ -5,7 +5,7 @@ SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 
 
 ## Description
 
-    SipClient is a sip client compatible with the
+    SipClient is a nodejs module compatible with the
     following specifications:
     - RFC 3261 (SIP),
     - RFC 2617 (Digest Authentication)
@@ -17,7 +17,7 @@ SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 
   `npm install @salvob/sipclient`
 
 ## Usage
-
+```javascript
     let sipClient = require('@salvob/sipclient').SipClient;
 
     let connection = {
@@ -59,10 +59,10 @@ SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 
             console.log(error, message);
             process.exit(1);
         }else{
-            console.log("Logged.");
+            console.log('Logged.');
         }
     });
-  
+```
 
 ## Tests
 
