@@ -18,9 +18,9 @@ SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 
 
 ## Usage
 
-    let sipclient = require('@salvob/sipclient').SipClient;
+    let sipClient = require('@salvob/sipclient').SipClient;
 
-    let clientData = {
+    let connection = {
         serverHost: 'sip.prov.com', // SIP server address
         serverPort: 5060,           // SIP server port
         username: 'sipusername',    // SIP username
@@ -29,29 +29,27 @@ SipClient is an open-source nodejs SIP library, compliant with the IETF RFC3261 
         sessionTime: 2 * 60         // Refresh session every 2 minutes
     }
 
-    let cb = {
-        onIncomingCall: (fromNumber, ringing, busy, message) => {
-            console.log(`Incoming: ${fromNumber}`);
+    let client = sipClient(connection);
 
-            if(fromNumber === '012223334455'){
-                ringing(() => { 
-                    console.log('Ringing');
-                    //Execute  script...
-                    //...
-                    //...
-                    //End Script
-                    //busy(() => { console.log('End'); })
-                })
-            }
-            else{
-                busy(() => { console.log('End'); })
-            }
+    //On incoming call
+    client.on('INVITE', (fromNumber, ringing, busy, message) => {
+        console.log(`Incoming: ${fromNumber}`);
+
+        if(fromNumber === '012223334455'){
+            ringing(() => { 
+                console.log('Ringing');
+                //Execute  script...
+                //...
+                //...
+                //End Script
+                //busy(() => { console.log('End'); })
+            })
         }
-    }
+        else{
+            busy(() => { console.log('End'); })
+        }
+    });
 
-    let client = sipclient(clientData, cb);
-
-    //Catch SIP Event
     client.on('CANCEL', (message) => {
         console.log('Closed');
     });

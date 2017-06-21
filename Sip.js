@@ -1,9 +1,3 @@
-/**
- * Sip Client
- * @param {Object} SIPConfig
- * @param {Object} Callbacks
- * @return {Function}
- */
 exports["SipClient"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -444,8 +438,8 @@ var SipClient = function SipClient(clientData, callbacks) {
         switch (eventName) {
             case 'INVITE':
                 var fromNumber = getFromNumber(message);
-                if (callbacks.onIncomingCall) {
-                    callbacks.onIncomingCall(fromNumber, function (callback) {
+                if (eventRegister['INVITE']) {
+                    eventRegister['INVITE'](fromNumber, function (callback) {
                         return sendMessage(ringingMessage(message), callback);
                     }, function (callback) {
                         return sendMessage(busyMessage(message), callback);
